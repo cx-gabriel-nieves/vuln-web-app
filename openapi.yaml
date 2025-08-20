@@ -1,0 +1,90 @@
+openapi: 3.0.0
+info:
+  title: Gaben sample API
+  version: 1.0.0
+servers:
+  - url: http://ec2-34-201-62-8.compute-1.amazonaws.com:88/api
+    description: GabeN DAST Vuln App Testing
+paths:
+  /:
+    get:
+      summary: No endpoint set
+      responses:
+        "400": # status code
+          description: No endpoint set
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /whoami:
+    get:
+      summary: Returns current login information
+      responses:
+        "200": # status code
+          description: Gives you back user information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /elevated:
+    get:
+      summary: Returns information on whether you are an elevated user or not
+      responses:
+        "200": # status code
+          description: Gives you back user information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /repeat:
+    get:
+      summary: Echos back the response
+      parameters:
+      - in: query
+        name: item
+        required: true
+        schema:
+          type: string
+          description: Arbitrary text to have printed out to you on the page
+      responses:
+        "200": # status code
+          description: Gives you back user information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        "400": # status code
+          description: Provides instructions for use of endpoint
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /redirect:
+    get:
+      summary: Redirect a user
+      parameters:
+      - in: query
+        name: url
+        required: true
+        schema:
+          type: string
+          description: URL to redirect you to
+      responses:
+        "200": # status code
+          description: Gives you back user information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string

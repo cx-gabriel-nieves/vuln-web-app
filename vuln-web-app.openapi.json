@@ -1,0 +1,173 @@
+{
+    "collection": {
+        "info": {
+            "_postman_id": "6f6d0ce5-981e-49be-9e0d-c1191b6970f4",
+            "name": "Training DAST App",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+            "updatedAt": "2025-08-01T15:53:11.000Z",
+            "createdAt": "2025-08-01T15:27:03.000Z",
+            "lastUpdatedBy": "39088086",
+            "uid": "39088086-6f6d0ce5-981e-49be-9e0d-c1191b6970f4"
+        },
+        "item": [
+            {
+                "name": "Whoami",
+                "id": "4bd32e08-56ae-4a78-8fc1-ff634b65c9e3",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                        "raw": "http://ec2-34-201-62-8.compute-1.amazonaws.com:88/api/whoami",
+                        "protocol": "http",
+                        "host": [
+                            "ec2-34-201-62-8",
+                            "compute-1",
+                            "amazonaws",
+                            "com"
+                        ],
+                        "port": "88",
+                        "path": [
+                            "api",
+                            "whoami"
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "39088086-4bd32e08-56ae-4a78-8fc1-ff634b65c9e3"
+            },
+            {
+                "name": "Check Elevated",
+                "id": "d6b80693-3f55-44f8-ab5f-d933c673c279",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                        "raw": "http://ec2-34-201-62-8.compute-1.amazonaws.com:88/api/elevated",
+                        "protocol": "http",
+                        "host": [
+                            "ec2-34-201-62-8",
+                            "compute-1",
+                            "amazonaws",
+                            "com"
+                        ],
+                        "port": "88",
+                        "path": [
+                            "api",
+                            "elevated"
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "39088086-d6b80693-3f55-44f8-ab5f-d933c673c279"
+            },
+            {
+                "name": "Repeat Text Back",
+                "id": "a0e36af5-802c-48dc-9ec7-3fda25ae80f2",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                        "raw": "http://ec2-34-201-62-8.compute-1.amazonaws.com:88/api/repeat?item=<div>Test</div>",
+                        "protocol": "http",
+                        "host": [
+                            "ec2-34-201-62-8",
+                            "compute-1",
+                            "amazonaws",
+                            "com"
+                        ],
+                        "port": "88",
+                        "path": [
+                            "api",
+                            "repeat"
+                        ],
+                        "query": [
+                            {
+                                "key": "item",
+                                "value": "<div>Test</div>"
+                            }
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "39088086-a0e36af5-802c-48dc-9ec7-3fda25ae80f2"
+            },
+            {
+                "name": "Arbitrary Redirect",
+                "id": "a6d79ca0-c3f4-4ca7-9587-3948df54bde4",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                        "raw": "http://ec2-34-201-62-8.compute-1.amazonaws.com:88/api/redirect?url=http://ec2-34-201-62-8.compute-1.amazonaws.com:88/api/whoami",
+                        "protocol": "http",
+                        "host": [
+                            "ec2-34-201-62-8",
+                            "compute-1",
+                            "amazonaws",
+                            "com"
+                        ],
+                        "port": "88",
+                        "path": [
+                            "api",
+                            "redirect"
+                        ],
+                        "query": [
+                            {
+                                "key": "url",
+                                "value": "http://ec2-34-201-62-8.compute-1.amazonaws.com:88/api/whoami"
+                            }
+                        ]
+                    }
+                },
+                "response": [],
+                "uid": "39088086-a6d79ca0-c3f4-4ca7-9587-3948df54bde4"
+            }
+        ],
+        "auth": {
+            "type": "bearer",
+            "bearer": [
+                {
+                    "key": "token",
+                    "value": "dGVzdA==",
+                    "type": "string"
+                }
+            ]
+        },
+        "event": [
+            {
+                "listen": "prerequest",
+                "script": {
+                    "id": "3c676795-59c4-4dd8-905c-0c47dfafd9dd",
+                    "type": "text/javascript",
+                    "packages": {},
+                    "exec": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "listen": "test",
+                "script": {
+                    "id": "acfc9c8b-7391-4998-9ec5-66728f5f4eb8",
+                    "type": "text/javascript",
+                    "packages": {},
+                    "exec": [
+                        ""
+                    ]
+                }
+            }
+        ]
+    }
+}
